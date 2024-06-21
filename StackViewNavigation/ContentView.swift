@@ -16,9 +16,9 @@ struct ContentView: View {
         NavigationStack(path: $navigationPath) {
             VStack {
                 List {
-                    ForEach(neoGeoList, id: \.id) { color in
-                        NavigationLink(value: color) {
-                            Label(color.name, systemImage: "gamecontroller")
+                    ForEach(neoGeoList, id: \.id) { game in
+                        NavigationLink(value: game) {
+                            Label(game.name, systemImage: "gamecontroller")
                         }
                     }
                 }
